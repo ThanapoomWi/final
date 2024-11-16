@@ -2,7 +2,7 @@ import React from 'react'
 import Chart from './Components/Chart'
 import './Dashboard.css'
 import PieChart from './Components/PieChart'
-
+import Map from './Components/Map'
 function Dashboard() {
   return (
     <div>
@@ -16,7 +16,7 @@ function Dashboard() {
                 <div className="d-sm-flex align-items-center justify-content-between mb-4">
                   <h1 className="h3 mb-0 text-gray-800">Dashboard</h1>
                   <select name="" id="" className='form-select max-w-sm'>
-                  <option value="1">ข้อมูลของวันนี้</option>
+                    <option value="1">ข้อมูลของวันนี้</option>
                     <option value="2">ข้อมูลของสัปดาห์นี้</option>
                     <option value="3">ข้อมูลของเดือนนี้</option>
                     <option value="4">ข้อมูลของปีนี้</option>
@@ -32,7 +32,7 @@ function Dashboard() {
                         <div className="row no-gutters align-items-center">
                           <div className="col mr-2">
                             <div className="text-xs font-weight-bold text-primary text-uppercase mb-1">
-                            <p className='font-bold text-[15px] text'>จำนวนผู้ให้บริการ</p>
+                              <p className='font-bold text-[15px] text'>จำนวนผู้ให้บริการ</p>
                             </div>
                             <div className="h5 mb-0 font-weight-bold text-gray-800 detail">$40,000</div>
                           </div>
@@ -55,13 +55,13 @@ function Dashboard() {
                           <div className="col mr-2">
                             <div className="text-xs font-weight-bold text-success text-uppercase mb-1">
                               <p className='font-bold text-[15px] text'>จำนวน Order</p>
-                              </div>
+                            </div>
                             <div className="h5 mb-0 font-weight-bold text-gray-800 detail">
                               <span>1,000 ออเดอร์</span>
-                              </div>
+                            </div>
                           </div>
                           <div className="col-auto">
-                            <i className="fas fa-dollar-sign fa-2x text-gray-300" />
+
                           </div>
                         </div>
 
@@ -77,7 +77,7 @@ function Dashboard() {
                         <div className="row no-gutters align-items-center">
                           <div className="col mr-2">
                             <div className="text-xs font-weight-bold text-info text-uppercase mb-1">
-                            <p className='font-bold text-[15px] text'>จำนวนรถ</p>
+                              <p className='font-bold text-[15px] text'>จำนวนรถ</p>
                             </div>
                             <div className="row no-gutters align-items-center">
                               <div className="col-auto">
@@ -101,8 +101,8 @@ function Dashboard() {
                         <div className="row no-gutters align-items-center">
                           <div className="col mr-2">
                             <div className="text-xs font-weight-bold text-warning text-uppercase mb-1">
-                               <p className='font-bold text-[15px] text'>จำนวนผู้ใช้บริการทั้งหมด</p>
-                               </div>
+                              <p className='font-bold text-[15px] text'>จำนวนผู้ใช้บริการทั้งหมด</p>
+                            </div>
                             <div className="h5 mb-0 font-weight-bold text-gray-800 detail"><span>1800 คน</span></div>
                           </div>
                           <div className="col-auto">
@@ -116,24 +116,49 @@ function Dashboard() {
                 {/* Content Row */}
                 <div className="row">
                   <div className='d-flex p-[2rem] pb-[3.5rem]'>
-                    <div className='bg-blue-400 rounded-xl text-white p-10 w-[30%]'>
-                      <div className='d-flex flex-column'>
-                      <h1>รายรับ</h1>
-                      <h4>1,000,000 บาท</h4>
+
+                    <div className='bg-blue-400 rounded-xl text-white w-[30%]'>
+                      <div className='d-flex p-5 justify-between items-center'>
+
+                        <div>
+                          <h1>รายรับ</h1>
+                          <h4>1,000,000 บาท</h4>
+                        </div>
+                        <div>
+                          <i className="bi bi-cash-coin fs-2"></i>
+                        </div>
+
                       </div>
                     </div>
-                    <div className='ml-10 bg-green-400 rounded-xl text-white p-10 w-[30%]'>
-                      <div className='d-flex flex-column'>
-                        <h1>รายได้</h1>
-                        <h4>1,000,000 บาท</h4>
+
+                    <div className='ml-10 bg-green-400 rounded-xl text-white w-[30%]'>
+                      <div className='d-flex p-5 justify-between items-center'>
+
+                          <div>
+                          <h1>รายได้</h1>
+                          <h4>1,000,000 บาท</h4>
+                          </div>
+                        <div>
+                        <i class="bi bi-graph-up fs-2"></i>
                         </div>
+                      </div>
+
                     </div>
-                    <div className='ml-10 bg-red-400 rounded-xl text-white p-10 w-[30%]'>
-                      <div className='d-flex flex-column'>
+
+                    <div className='ml-10 bg-red-400 rounded-xl text-white  w-[30%]'>
+                      <div className='d-flex p-5 justify-between items-center'>
+
+                        <div>
                         <h1>รายจ่าย</h1>
                         <h4>70,000 บาท</h4>
                         </div>
+                        <div>
+                        <i class="bi bi-graph-down-arrow fs-2"></i>
+                        </div>
+
+                      </div>
                     </div>
+
                   </div>
                   {/* Pie Chart */}
                   <div className="col-xl-4 col-lg-5">
@@ -146,25 +171,29 @@ function Dashboard() {
                       {/* Card Body */}
                       <div className="card-body">
                         <Chart />
-                        {/* <div className="mt-4 text-center small">
+                        <div className="mt-4 text-center small">
                           <span className="mr-2 text-blue-500 font-bold">
-                            <i className="fas text-blue-500 fa-circle" /> ภาคเหนือ
+                            <i className="fas text-blue-500 fa-circle" />รถเก๋ง
                           </span>
                           <span className="mr-2 text-purple-500 font-bold">
-                            <i className="fas fa-circle text-success" /> ภาคใต้
+                            <i className="fas fa-circle text-success" />รถสิบล้อ
                           </span>
                           <span className="mr-2 text-orange-400 font-bold">
-                            <i className="fas fa-circle text-success" /> ภาคตะวันออกเฉียงเหนือ
+                            <i className="fas fa-circle text-success" />รถสิบสองล้อ
                           </span>
                           <span className="mr-2 text-green-500 font-bold">
-                            <i className="fas fa-circle text-success" /> ภากลาง
+                            <i className="fas fa-circle text-success" />รถกระบะ
                           </span>
-                        </div> */}
+                        </div>
                       </div>
 
                     </div>
                   </div>
-        
+
+<div>
+  <Map/>
+</div>
+ 
                 </div>
               </div>
             </div>

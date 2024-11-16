@@ -31,8 +31,8 @@ function App() {
                             <Route path='/adminmanagement' element={<AdminManagement />} />
                             <Route path='/permission' element={<Permission />} />
                             <Route path='/review' element={<Review />} />
-                            <Route path='status' element={<AccountStatus />} />
-                            <Route path='adminaccmanagement' element={<AdminAccout />} />
+                            <Route path='/status' element={<AccountStatus />} />
+                            <Route path='/adminaccmanagement' element={<AdminAccout />} />
                         </Routes>
                     </div>
                 </div>

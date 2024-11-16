@@ -26,7 +26,7 @@ const data = [
     },
     {
         name: 'Apr',
-        รถยนต์: 8400,
+        รถเก๋ง: 8400,
         รถสิบล้อ: 5200,
         รถสิบสองล้อ: Math.floor(Math.random() * 10000),
         รถกระบะ: Math.floor(Math.random() * 10000)
@@ -59,7 +59,7 @@ function Chart() {
                 <CartesianGrid strokeDasharray="3 3" />
 
                 <Tooltip />
-                <Legend style={{ marginTop: '20px' }} />
+                {/* <Legend style={{ marginTop: '20px' }} /> */}
             </LineChart>
         </ResponsiveContainer>
 

@@ -1,6 +1,7 @@
 /* Sidebar.css */
 .sidebar {
     position: relative;
+    min-width: 250px;
     width: 250px;
     background-color: #2a822a;
     color: white;
@@ -11,21 +12,22 @@
     transition: 0.5s;
 }
 
-.sidebar.active {
+.sidebar.toggle {
     position: relative;
     margin-left: -250px;
     width: 250px;
-    background-color: #2F4F2F;
+    background-color: #2a822a;
     color: white;
-    min-height: 110vh;
+    min-height: 100vh;
     display: flex;
     flex-direction: column;
     padding: 20px;
+    transition: 0.5s;
 }
 
 .sidebar-logo {
     font-size: 24px;
-    margin-bottom: 20px;
+    margin-bottom: 10px;
 }
 
 .sidebar-menu {
@@ -35,7 +37,7 @@
 
 .menu-item {
     width: 100%;
-    padding: 10px;
+    padding: 10px 5px;
     cursor: pointer;
     font-size: 16px;
     text-align: left;
@@ -55,13 +57,14 @@
     color: white;
     transition: 0.4s;
     text-decoration: none;
-    padding: 10px 22px;
+    padding: 10px 15px;
+    /* background-color: #4aff4a; */
     background-color: #4aff4a;
     border-radius: 10px;
 }
 
 .menu-item:hover {
-    padding: 10px 22px;
+    padding: 10px 15px;
     background-color: #4aff4a;
     border-radius: 10px;
 }

@@ -2,13 +2,13 @@
 import React from 'react';
 import './Navbar.css';
 import { Link , useLocation } from 'react-router-dom';
-
+import logo from '../../../public/logo.png'
 function Sidebar({ slide }) {
     const currentTab = useLocation();
     return (
-        <div className={slide ? 'sidebar active' : 'sidebar'}>
+        <div className={slide ? 'sidebar toggle' : 'sidebar'}>
             <div className="sidebar-logo">
-                <h2>SLIDE ME</h2>
+                <img src={logo} alt="" />
             </div>
             <ul className="sidebar-menu">
                 <Link to='/dashboard'><button className={`my-1 menu-item ${currentTab.pathname === '/dashboard' && 'active'}`}>Dashboard</button></Link>

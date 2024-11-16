@@ -38,6 +38,11 @@
     cursor: pointer;
 }
 
+.header-profile img {
+    width: 43px;
+    height: 39px;
+}
+
 .profile-pic {
     width: 30px;
     height: 30px;
